@@ -131,9 +131,9 @@ nav a:hover, nav a.active {
 .vertici-badge {
     width: 120px;
     height: 120px;
-    background-size: contain;
+    background-size: cover; /* <-- ECCO LA MAGIA */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top; /* Centra la foto partendo dal viso */
     border-radius: 50%;
     box-shadow: 0 0 20px var(--bcso-gold-glow);
     flex-shrink: 0;
