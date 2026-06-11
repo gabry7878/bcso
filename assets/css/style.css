@@ -1,0 +1,472 @@
+:root {
+    --bg-main: #05070a; 
+    --bg-card: #0d131f; 
+    --bcso-gold: #eab308; 
+    --bcso-gold-glow: rgba(234, 179, 8, 0.4);
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.text-highlight {
+    color: var(--text-main);
+}
+
+/* --- NAVBAR --- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(5, 7, 10, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+nav a:hover, nav a.active {
+    color: var(--bcso-gold);
+    border-color: var(--bcso-gold);
+    box-shadow: 0 0 10px var(--bcso-gold-glow), inset 0 0 10px var(--bcso-gold-glow);
+    background: rgba(234, 179, 8, 0.05);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 60vh;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, transparent, var(--bg-main)), 
+                url('https://cdn.discordapp.com/attachments/1514660019801690123/1514663437215600790/image.png?ex=6a2c2fc0&is=6a2ade40&hm=0b3a884235351513f7c9d3c410d54ee5a8cf1952ba2fbfbbf81c02c77161a06d&') center/cover;
+    border-bottom: 2px solid var(--bcso-gold);
+    box-shadow: 0 10px 30px var(--bcso-gold-glow);
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.hero-content .highlight {
+    color: var(--bcso-gold);
+    text-shadow: 0 0 15px var(--bcso-gold-glow);
+    font-size: 4rem;
+}
+
+/* --- SEZIONI GENERALI --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px var(--bcso-gold-glow);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    background: var(--bcso-gold);
+    margin: 10px auto 0;
+    box-shadow: 0 0 10px var(--bcso-gold-glow);
+}
+
+/* --- CARD VERTICI --- */
+.vertici-card {
+    background: var(--bg-card);
+    border: 1px solid var(--bcso-gold);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 0 15px var(--bcso-gold-glow);
+    margin-bottom: 50px;
+}
+
+.vertici-badge {
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--bcso-gold-glow);
+    flex-shrink: 0;
+}
+
+#vertici-content {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.vertici-info h3 {
+    color: var(--bcso-gold);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.vertici-info p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tag-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.tag:hover, .tag.active {
+    background: rgba(234, 179, 8, 0.1); 
+    border-color: var(--bcso-gold);
+    color: var(--bcso-gold);
+    box-shadow: 0 0 10px var(--bcso-gold-glow);
+}
+
+/* --- GRIGLIA REPARTI --- */
+.grid-reparti {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.reparto-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.reparto-card:hover {
+    border-color: var(--bcso-gold);
+    box-shadow: 0 0 15px var(--bcso-gold-glow);
+    transform: translateY(-5px);
+}
+
+.reparto-icon {
+    font-size: 2rem;
+    color: var(--bcso-gold);
+    width: 50px;
+    text-align: center;
+}
+
+.reparto-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.reparto-text p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* --- ALTO COMANDO --- */
+.grid-comando {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.comando-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.comando-card:hover {
+    border-color: var(--bcso-gold);
+    box-shadow: 0 0 15px var(--bcso-gold-glow);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 auto 15px;
+    border: 2px solid var(--bcso-gold);
+    background-size: cover;
+    background-position: center;
+}
+
+.ruolo {
+    color: var(--bcso-gold);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.data-servizio {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --- CRONOLOGIA TABLE --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+th {
+    color: var(--bcso-gold);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.02);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ef4444;
+    margin-right: 8px;
+    box-shadow: 0 0 8px #ef4444;
+}
+
+.status-dot.active {
+    background-color: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+/* --- RECLUTAMENTO STEPS --- */
+.steps-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.step-box {
+    flex: 1;
+    min-width: 200px;
+    background: var(--bg-card);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+
+.step-box:hover {
+    border-color: var(--bcso-gold);
+    box-shadow: inset 0 0 20px rgba(234, 179, 8, 0.05);
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(234, 179, 8, 0.2);
+    margin-bottom: 10px;
+}
+
+.step-title {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--bcso-gold);
+    border: 1px solid var(--bcso-gold);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.btn:hover {
+    background: var(--bcso-gold);
+    color: var(--bg-main);
+    box-shadow: 0 0 10px var(--bcso-gold-glow);
+}
+
+.warning-box {
+    margin-top: 30px;
+    border: 1px solid #b45309;
+    background: rgba(180, 83, 9, 0.1);
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    color: #fcd34d;
+    font-size: 0.9rem;
+}
+
+/* --- MATERIALE OPERATIVO --- */
+.materiale-container {
+    display: flex;
+    justify-content: center; /* Centra la card orizzontalmente */
+    align-items: center;
+}
+
+.manuale-card {
+    background: var(--bg-card);
+    border: 1px solid var(--bcso-gold);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    max-width: 450px; /* Dà una larghezza massima per non farla deformare */
+    width: 100%;
+}
+
+.manuale-card i {
+    font-size: 3rem;
+    color: var(--bcso-gold);
+    margin-bottom: 20px;
+}
+
+.rules-box {
+    background: #0f172a; 
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 20px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.rules-box h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .materiale-container { grid-template-columns: 1fr; }
+    .vertici-card { flex-direction: column; text-align: center; }
+    nav { flex-wrap: wrap; }
+    .hero-content .highlight { font-size: 2.5rem; }
+}
+
+/* --- DISCLAIMER RP --- */
+.disclaimer-rp {
+    position: fixed;
+    top: 15px;
+    right: 15px; /* Se preferisci averlo a sinistra come nel sito FIB, cambia 'right' con 'left' */
+    max-width: 320px;
+    background-color: var(--bg-main); /* Sfondo scurissimo che copre la navbar sotto */
+    border: 1px solid rgba(234, 179, 8, 0.2); /* Bordino oro leggerissimo */
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    z-index: 2000;
+    line-height: 1.4;
+    text-align: justify; /* Giustifica il testo per renderlo un blocco squadrato perfetto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(234, 179, 8, 0.2); /* Linea di separazione dorata leggera */
+    background: rgba(5, 7, 10, 0.9); /* Sfondo scuro che si fonde col sito */
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+footer .creator-name {
+    color: var(--bcso-gold); /* Colora il tuo nome col giallo sceriffo */
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--bcso-gold-glow); /* Aggiunge un leggero bagliore */
+}
