@@ -182,8 +182,9 @@ nav a:hover, nav a.active {
 
 /* --- GRIGLIA REPARTI --- */
 .grid-reparti {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Questo è il comando magico che centra la seconda riga */
     gap: 20px;
 }
 
@@ -197,6 +198,9 @@ nav a:hover, nav a.active {
     gap: 15px;
     transition: all 0.3s;
     cursor: pointer;
+    /* Nuove regole per adattare la dimensione e centrarli */
+    flex: 1 1 300px;
+    max-width: 360px; /* Evita che si allarghino troppo diventando giganti */
 }
 
 .reparto-card:hover {
