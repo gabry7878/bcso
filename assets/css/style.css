@@ -474,3 +474,66 @@ footer .creator-name {
     font-weight: bold;
     text-shadow: 0 0 10px var(--bcso-gold-glow); /* Aggiunge un leggero bagliore */
 }
+
+/* --- GERARCHIA --- */
+.gerarchia-container {
+    max-width: 600px; /* La teniamo stretta per un look a colonna elegante */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gerarchia-tier {
+    background: var(--bg-card);
+    border: 1px solid rgba(234, 179, 8, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.gerarchia-tier:hover {
+    border-color: var(--bcso-gold);
+    box-shadow: 0 0 15px var(--bcso-gold-glow);
+    transform: scale(1.02); /* Leggero effetto zoom al passaggio del mouse */
+}
+
+.tier-title {
+    color: var(--bcso-gold);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 10px;
+}
+
+.rank-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rank-list li {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.rank-list .rank-top {
+    font-weight: bold;
+    color: #fff; /* Fa risaltare il grado più alto di ogni categoria */
+}
+
+.tier-arrow {
+    color: var(--bcso-gold);
+    font-size: 1.2rem;
+    margin: 15px 0;
+    opacity: 0.5; /* Lo rende un dettaglio visivo sottile */
+}
