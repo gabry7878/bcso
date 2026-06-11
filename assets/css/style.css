@@ -228,8 +228,9 @@ nav a:hover, nav a.active {
 
 /* --- ALTO COMANDO --- */
 .grid-comando {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Questo allinea tutto al centro, inclusa l'ultima riga */
     gap: 20px;
 }
 
@@ -240,6 +241,10 @@ nav a:hover, nav a.active {
     padding: 25px 15px;
     text-align: center;
     transition: all 0.3s;
+    
+    /* Aggiunte per adattare la dimensione e centrarli */
+    flex: 1 1 200px; 
+    max-width: 230px; /* Impedisce a Madrid di allargarsi per tutto lo schermo! */
 }
 
 .comando-card:hover {
