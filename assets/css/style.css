@@ -325,15 +325,19 @@ tr:hover {
 }
 
 /* --- RECLUTAMENTO STEPS --- */
+/* --- RECLUTAMENTO STEPS --- */
 .steps-container {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center; /* Centra le card se non riempiono tutta la riga */
+    max-width: 1100px;       /* <--- AGGIUNTO: Limita la larghezza massima totale */
+    margin: 0 auto;          /* <--- AGGIUNTO: Centra il blocco nella pagina */
 }
 
 .step-box {
-    flex: 1;
-    min-width: 200px;
+    flex: 1 1 200px;         /* Mantieni questo */
+    max-width: 230px;        /* <--- AGGIUNTO: Questo restringe ogni singola card */
     background: var(--bg-card);
     border: 1px solid rgba(234, 179, 8, 0.3);
     border-radius: 8px;
@@ -541,4 +545,78 @@ footer .creator-name {
     font-size: 1.2rem;
     margin: 15px 0;
     opacity: 0.5; /* Lo rende un dettaglio visivo sottile */
+}
+
+/* --- RISORSE UTILI --- */
+.risorse-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.risorsa-card {
+    background: var(--bg-card);
+    border: 1px solid var(--bcso-gold);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.risorsa-card:hover {
+    background: var(--bcso-gold);
+    color: var(--bg-main);
+}
+
+.risorsa-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.reparto-dropdown {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border-left: 2px solid var(--bcso-gold);
+    text-align: left;
+}
+
+.reparto-card {
+    cursor: pointer; /* Cambia il cursore per far capire che è cliccabile */
+}
+
+/* Stile per il riempimento circolare del bottone */
+.tag {
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden; /* Fondamentale per nascondere il bordo extra */
+}
+
+/* Creiamo un elemento dedicato solo al bordo animato */
+.tag.active::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 20px;
+    border: 3px solid var(--bcso-gold);
+    box-sizing: border-box;
+    /* Usiamo clip-path per disegnare il bordo pezzo per pezzo */
+    clip-path: inset(0% 100% 0% 0% round 20px); 
+    animation: fillBorder 10s linear forwards;
+}
+
+@keyframes fillBorder {
+    0% { clip-path: inset(0% 100% 0% 0% round 20px); }
+    100% { clip-path: inset(0% 0% 0% 0% round 20px); }
 }
