@@ -30,13 +30,13 @@ const datiVertici = {
     lodi: {
         titolo: "Dir. Generale Coca",
         foto: "https://cdn.discordapp.com/attachments/1514660019801690123/1514682881153437696/image.png?ex=6a2c41dc&is=6a2af05c&hm=53c4ff69c6dd13473cd8b7cff574f9bb33eb2dd29856b9dd8ce1dfa7fc6d4fe0&",
-        data: "In servizio dal 15/01/2025.",
+        data: "In servizio dal 06/12/2025.",
         descrizione: "Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna."
     },
     roma: {
         titolo: "Vice Dir. Generale Detroit",
         foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
-        data: "In servizio dal 20/02/2025.",
+        data: "In servizio dal 29/05/2026.",
         descrizione: "Braccio destro dello Sceriffo, supervisiona le operazioni quotidiane e garantisce che le direttive dell'alto comando vengano eseguite con la massima efficienza."
     },
     saitama: {
@@ -48,7 +48,7 @@ const datiVertici = {
     cagliari: {
         titolo: "Vice Direttore (Cagliari)",
         foto: "INSERISCI_URL_CAGLIARI",
-        data: "In servizio dal 05/04/2025.",
+        data: "In servizio dal 24/05/2026.",
         descrizione: "Assiste la direzione operativa nella gestione del personale e nella logistica del dipartimento. È il punto di riferimento principale per la formazione delle nuove reclute."
     }
 };
