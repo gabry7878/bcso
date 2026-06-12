@@ -35,13 +35,13 @@ const datiVertici = {
     },
     roma: {
         titolo: "Vice Dir. Generale Detroit",
-        foto: "INSERISCI_URL_DETROIT",
+        foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
         data: "In servizio dal 20/02/2025.",
         descrizione: "Braccio destro dello Sceriffo, supervisiona le operazioni quotidiane e garantisce che le direttive dell'alto comando vengano eseguite con la massima efficienza."
     },
     saitama: {
         titolo: "Direttore Atlanta",
-        foto: "INSERISCI_URL_ATLANTA",
+        foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
         data: "In servizio dal 10/03/2025.",
         descrizione: "Responsabile diretto delle unità tattiche e delle indagini speciali. Gestisce il dispiegamento delle pattuglie nelle zone ad alto rischio."
     },
