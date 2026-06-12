@@ -20,7 +20,7 @@
         <a href="#reparti">Reparti</a>
         <a href="#altocomando">Alto Com</a>
         <a href="#gerarchia">Gerarchia</a>
-        <a href="https://emeralsgov.it/los_santos/" target="_blank">Codice Penale</a> <!-- NUOVO TASTO -->
+        <a href="https://emeralsgov.it" target="_blank">Codice Penale</a> <!-- NUOVO TASTO -->
         <a href="#storia">Storia</a>
         <a href="#arruolati">Entra nel BCSO</a>
         <a href="#manuale">Manuale</a>
@@ -53,37 +53,60 @@
             </div>
         </section>
 
+        <!-- REPARTI -->
         <section id="reparti">
-            <h2 class="section-title">Reparti</h2>
+            <h2 class="section-title">REPARTI</h2>
             <div class="grid-reparti">
-                <div class="reparto-card">
-                    <div class="reparto-icon"><i class="fas fa-crosshairs"></i></div>
+                
+                <!-- GND -->
+                <div class="reparto-card" onclick="toggleMenu('menu-gnd')">
+                    <div class="reparto-icon"><i class="fas fa-gun"></i></div>
                     <div class="reparto-text">
                         <h4>GND</h4>
-                        <p>Gang & Narcotics Division: Si occupa di narcotrafficanti e associazioni a delinquiere</p>
+                        <p>Gang & Narcotics Division: Si occupa di narcotrafficanti e associazioni a delinquere</p>
+                        <div id="menu-gnd" class="reparto-dropdown" style="display:none; margin-top:10px; font-size:0.9rem; color: var(--bcso-gold);">
+                            Direttore: Montenegro<br>
+                            Vice Direttore: Stuporeh
+                        </div>
                     </div>
                 </div>
-                <div class="reparto-card">
-                    <div class="reparto-icon"><i class="fas fa-shield-alt"></i></div>
+
+                <!-- JTF2 -->
+                <div class="reparto-card" onclick="toggleMenu('menu-jtf')">
+                    <div class="reparto-icon"><i class="fas fa-bullseye"></i></div>
                     <div class="reparto-text">
                         <h4>JTF2</h4>
-                        <p>JJoint Task Force 2: Si occupa di sicurezza governativa</p>
+                        <p>Joint Task Force 2: Si occupa di sicurezza governativa</p>
+                        <div id="menu-jtf" class="reparto-dropdown" style="display:none; margin-top:10px; font-size:0.9rem; color: var(--bcso-gold);">
+                            Gestore: Coca<br>
+                            Vice Gestore: Madrid
+                        </div>
                     </div>
                 </div>
-                <div class="reparto-card">
+
+                <!-- Investigativa -->
+                <div class="reparto-card" onclick="toggleMenu('menu-inv')">
                     <div class="reparto-icon"><i class="fas fa-search"></i></div>
                     <div class="reparto-text">
                         <h4>Investigativa</h4>
                         <p>Indagini su attività delinquenti</p>
+                        <div id="menu-inv" class="reparto-dropdown" style="display:none; margin-top:10px; font-size:0.9rem; color: var(--bcso-gold);">
+                            Comandante: CRIPTATO<br>
+                            Vice Comandante: CRIPTATO
+                        </div>
                     </div>
                 </div>
+
+                <!-- SDF -->
                 <div class="reparto-card">
-                    <div class="reparto-icon"><i class="fas fa-car-crash"></i></div>
+                    <div class="reparto-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="reparto-text">
                         <h4>SDF</h4>
                         <p>Blocchi e fermi stradali</p>
                     </div>
                 </div>
+
+                <!-- Elicotteristi -->
                 <div class="reparto-card">
                     <div class="reparto-icon"><i class="fas fa-helicopter"></i></div>
                     <div class="reparto-text">
@@ -91,8 +114,86 @@
                         <p>Pattugliamento e controllo aereo</p>
                     </div>
                 </div>
+
             </div>
         </section>
+
+        <br><br><br>
+
+                <!-- RISORSE UTILI -->
+        <section id="risorse">
+            <h2 class="section-title">Risorse Utili</h2>
+            <div class="risorse-container">
+                <!-- Opzione 1 -->
+                <a href="https://emeralsgov.it/los_santos/" target="_blank" class="risorsa-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Codice Penale</h3>
+                </a>
+
+                <!-- Opzione 2 -->
+                <div class="risorsa-card" onclick="toggleCodici()">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h3>Codici Radio</h3>
+                </div>
+
+                <!-- Opzione 3 -->
+                <a href="https://cdn.discordapp.com/attachments/1514660019801690123/1514668859226067115/REGOLAMENTO_INTERNO_B.C.S.O.pdf?ex=6a2cdd8d&is=6a2b8c0d&hm=317593de6f7b42b3d2924964b75c0fa9f3e5de1a6be54c7c39dfeebe1ded7c3b&" target="_blank" class="risorsa-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Manuale Operativo</h3>
+                </a>
+            </div>
+
+            <!-- Contenuto Nascosto Codici Radio -->
+            <div id="codici-radio-text" style="display:none; max-width: 800px; margin: 20px auto; background: var(--bg-card); padding: 20px; border-radius: 8px; border: 1px solid var(--bcso-gold); white-space: pre-wrap; color: white; text-align: left;">
+            10-0  GAME CRASH
+            10-2  RIPETERE
+            10-3  SILENZIO RADIO (Utilizzabile solo da alto comando e direzione)
+            10-4  AFFERMATIVO
+            10-5  NEGATIVO
+            10-7  USCITA DI SERVIZIO
+            10-8  ENTRATA IN SERVIZIO
+            10-9  AFK PER 5 MIN O PIU'
+            10-10 SPARATORIA
+            10-15 SITUAZIONE DI PERICOLO
+            10-17 RAGGRUPPAMENTO SOSPETTO DI PERSONE
+            10-19 RIGA IN CENTRALE
+            10-20 CHIEDERE LA POSIZIONE
+            10-25 FERMO STRADALE (INDICARE IL CIVICO)
+            10-30 EAGLE IN DECOLLO DALLA CENTRALE (CHIEDERE AUTORIZZAZIONE RADIO)
+            10-31 EAGLE IN ATTERAGGIO IN CENTRALE (CHIEDERE AUTORIZZAZIONE RADIO)
+            10-48 ARRIVARE SILENZIOSAMENTE
+            10-50 VEICOLO SOSPETTO
+            10-55 NUMERO RANGER - NOME DEGLI AGENTI CHE LA COMPONGONO - STATUS DELLA RANGER
+            10-60 RICHIESTA RANGER DI SUPPORTO (INDICARE IL CIVICO)
+            10-66 TENTATO RAPIMENTO
+            10-80 INSEGUIMENTO (INDICARE IL CIVICO E RICHIEDERE UN 10-60 IN SUPPORTO)
+            10-99 RAPINA IN CORSO
+            10-100 AGENTE A TERRA (INDICARE IL CIVICO)
+            10-101 ASSALTO ALLA CENTRALE
+
+            FREQUENZE RADIO DELLE FDO / EMS / RIMOZIONE FORZATA:
+
+            - Sceriffato 1.3
+            - LSPD 1.2 
+            - FBI 1.1
+            - Governo LS 1
+            - EMS* 2
+            - EMS Paleto/Sandy 2.1
+            </div>
+            
+            </div>
+        </section>
+
+        <script>
+        function toggleCodici() {
+            var x = document.getElementById("codici-radio-text");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        </script>
 
         <br><br><br>
 
@@ -249,19 +350,7 @@
 
         <br><br><br>
 
-        <section id="manuale">
-            <h2 class="section-title">Materiale Operativo</h2>
-            <div class="materiale-container">
-                <div class="manuale-card">
-                    <i class="fas fa-book"></i>
-                    <h3 style="margin-bottom: 10px; color: var(--text-main);">Manuale Reclute</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
-                        Questo documento contiene i protocolli operativi, i codici radio e le procedure di arresto obbligatorie per ogni Deputy. La conoscenza totale è richiesta per il superamento del colloquio.
-                    </p>
-                    <a href="https://cdn.discordapp.com/attachments/1514660019801690123/1514668859226067115/REGOLAMENTO_INTERNO_B.C.S.O.pdf?ex=6a2c34cd&is=6a2ae34d&hm=e8ebdee5948477e59f6af7ae6769255beaea0fbee8e74b264625b3ff6b8ae909&" target="_blank" class="btn" style="background: var(--bcso-gold); color: var(--bg-main); font-weight: bold;">SCARICA MANUALE <i class="fas fa-download"></i></a>
-                </div>
-            </div>
-        </section>
+
 
     </div>
 
@@ -271,5 +360,16 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+
+<script>
+function toggleMenu(id) {
+    var menu = document.getElementById(id);
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
