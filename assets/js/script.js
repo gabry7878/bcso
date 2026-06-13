@@ -29,7 +29,7 @@ window.addEventListener("scroll", () => {
 const datiVertici = {
     lodi: {
         titolo: "Dir. Generale Coca",
-        foto: "https://imgur.com/5RhvQZR",
+        foto: "assets/img/coca.png",
         data: "In servizio dal 06/12/2025.",
         descrizione: "Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna."
     },
