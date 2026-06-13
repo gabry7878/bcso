@@ -34,10 +34,10 @@ const datiVertici = {
         descrizione: "Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna."
     },
     roma: {
-        titolo: "Vice Dir. Generale Detroit",
+        titolo: "//",
         foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
-        data: "In servizio dal 29/05/2026.",
-        descrizione: "Braccio destro dello Sceriffo, supervisiona le operazioni quotidiane e garantisce che le direttive dell'alto comando vengano eseguite con la massima efficienza."
+        data: "//",
+        descrizione: "//"
     },
     saitama: {
         titolo: "Direttore Atlanta",
