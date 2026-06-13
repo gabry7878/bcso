@@ -68,7 +68,7 @@ nav a:hover, nav a.active {
     justify-content: center;
     text-align: center;
     background: linear-gradient(to bottom, transparent, var(--bg-main)), 
-                url('https://imgur.com/1cKQvTR') center/cover;
+                url('assets/img/sfondo.png') center/cover;
     border-bottom: 2px solid var(--bcso-gold);
     box-shadow: 0 10px 30px var(--bcso-gold-glow);
     position: relative;
