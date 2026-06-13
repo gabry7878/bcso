@@ -68,7 +68,7 @@ nav a:hover, nav a.active {
     justify-content: center;
     text-align: center;
     background: linear-gradient(to bottom, transparent, var(--bg-main)), 
-                url('https://cdn.discordapp.com/attachments/1514660019801690123/1514663437215600790/image.png?ex=6a2c2fc0&is=6a2ade40&hm=0b3a884235351513f7c9d3c410d54ee5a8cf1952ba2fbfbbf81c02c77161a06d&') center/cover;
+                url('https://imgur.com/1cKQvTR') center/cover;
     border-bottom: 2px solid var(--bcso-gold);
     box-shadow: 0 10px 30px var(--bcso-gold-glow);
     position: relative;
