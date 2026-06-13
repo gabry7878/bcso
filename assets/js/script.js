@@ -44,12 +44,6 @@ const datiVertici = {
         foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
         data: "In servizio dal 10/03/2025.",
         descrizione: "Responsabile diretto delle unità tattiche e delle indagini speciali. Gestisce il dispiegamento delle pattuglie nelle zone ad alto rischio."
-    },
-    cagliari: {
-        titolo: "Vice Direttore (Cagliari)",
-        foto: "INSERISCI_URL_CAGLIARI",
-        data: "In servizio dal 24/05/2026.",
-        descrizione: "Assiste la direzione operativa nella gestione del personale e nella logistica del dipartimento. È il punto di riferimento principale per la formazione delle nuove reclute."
     }
 };
 
