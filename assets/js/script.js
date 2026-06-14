@@ -1,5 +1,5 @@
 // --- VARIABILI GLOBALI PER LA ROTAZIONE ---
-const bottoniOrdine = ['lodi', 'roma', 'saitama', 'cagliari'];
+const bottoniOrdine = ['coca', 'detroit', 'atlanta']; // Nomi allineati correttamente
 let indiceCorrente = 0;
 let timerRotazione;
 
@@ -27,86 +27,70 @@ window.addEventListener("scroll", () => {
 
 // --- 2. GESTIONE DATI VERTICI ---
 const datiVertici = {
-    lodi: {
-        titolo: "Dir. Generale Coca",
-        foto: "assets/img/coca.png",
-        data: "In servizio dal 06/12/2025.",
-        descrizione: "Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna."
+    coca: { 
+        t: "Dir. Generale Coca",
+        f: "assets/img/coca.png",
+        d: "In servizio dal 06/12/2025.",
+        ds: "Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna."
     },
-    roma: {
-        titolo: "//",
-        foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
-        data: "//",
-        descrizione: "//"
+    detroit: { 
+        t: "V. Dir. Generale Detroit",
+        f: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
+        d: "In servizio dal 29/12/2025.",
+        ds: "Coadiuva la direzione generale nella supervisione dei dipartimenti e nel coordinamento strategico sul territorio."
     },
-    saitama: {
-        titolo: "Direttore Atlanta",
-        foto: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
-        data: "In servizio dal 10/03/2025.",
-        descrizione: "Responsabile diretto delle unità tattiche e delle indagini speciali. Gestisce il dispiegamento delle pattuglie nelle zone ad alto rischio."
+    atlanta: { 
+        t: "Direttore Atlanta",
+        f: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
+        d: "In servizio dal 10/03/2025.",
+        ds: "Responsabile diretto delle unità tattiche e delle indagini speciali. Gestisce il dispiegamento delle pattuglie nelle zone ad alto rischio."
     }
 };
 
 // --- 3. LOGICA CAMBIO VERTICI E ANIMAZIONE ---
-function cambiaVertice(idRuolo, elementoCliccato) {
-    // 1. Reset visivo dei bottoni
-    const bottoni = document.querySelectorAll('.tag-container .tag');
-    bottoni.forEach(btn => btn.classList.remove('active'));
+function _cV(r, e) {
+    document.querySelectorAll('.tag-container .tag').forEach(b => b.classList.remove('active'));
+    e.classList.add('active');
     
-    // 2. Aggiungi 'active' al bottone che hai appena selezionato
-    elementoCliccato.classList.add('active');
+    // Reset dell'animazione
+    e.style.animation = 'none';
+    e.offsetHeight; 
+    e.style.animation = null;
 
-    // --- AGGIUNTA DEL TRUCCO PER L'ANIMAZIONE ---
-    // Resetta l'animazione forzando il browser a ricalcolarla
-    elementoCliccato.style.animation = 'none';
-    elementoCliccato.offsetHeight; // Questo comando legge l'altezza e "sveglia" il browser
-    elementoCliccato.style.animation = null; 
-    // --------------------------------------------
-
-    // 3. Logica di cambio dati (dissolvenza)
-    const contenitore = document.getElementById('vertici-content');
-    const foto = document.getElementById('vertici-img');
-    
-    contenitore.style.opacity = 0;
-    foto.style.opacity = 0;
+    const c = document.getElementById('vertici-content'), f = document.getElementById('vertici-img');
+    c.style.opacity = 0;
+    f.style.opacity = 0;
 
     setTimeout(() => {
-        const dati = datiVertici[idRuolo];
-        document.getElementById('vertici-titolo').innerText = dati.titolo;
-        document.getElementById('vertici-desc').innerHTML = `<strong class="text-highlight">${dati.data}</strong> ${dati.descrizione}`;
-        foto.style.backgroundImage = `url('${dati.foto}')`;
-        
-        contenitore.style.opacity = 1;
-        foto.style.opacity = 1;
+        const d = datiVertici[r];
+        document.getElementById('vertici-titolo').innerText = d.t;
+        document.getElementById('vertici-desc').innerHTML = `<strong class="text-highlight">${d.d}</strong> ${d.ds}`;
+        f.style.backgroundImage = `url('${d.f}')`;
+        c.style.opacity = 1;
+        f.style.opacity = 1;
     }, 200);
 }
 
 // --- 4. GESTIONE ROTAZIONE AUTOMATICA ---
-function avviaRotazioneAutomatica() {
-    if (timerRotazione) clearInterval(timerRotazione);
-    
-    timerRotazione = setInterval(() => {
+function _aR() {
+    if (_tR) clearInterval(_tR);
+    _tR = setInterval(() => {
         indiceCorrente = (indiceCorrente + 1) % bottoniOrdine.length;
-        const idDaSelezionare = bottoniOrdine[indiceCorrente];
-        const bottoneDaCliccare = document.querySelector(`button[onclick*="${idDaSelezionare}"]`);
-        
-        if (bottoneDaCliccare) {
-            cambiaVertice(idDaSelezionare, bottoneDaCliccare);
-        }
+        const i = bottoniOrdine[indiceCorrente], b = document.querySelector(`button[onclick*="${i}"]`);
+        if (b) _cV(i, b);
     }, 10000);
 }
 
 // --- 5. GESTIONE CODICI RADIO ---
-function toggleCodici() {
-    var x = document.getElementById("codici-radio-text");
-    x.style.display = (x.style.display === "none") ? "block" : "none";
+function _tC() {
+    let x = document.getElementById("codici-radio-text");
+    x.style.display = x.style.display === "none" ? "block" : "none";
 }
 
 // --- 6. GESTIONE MENU REPARTI ---
-function toggleMenu(id) {
-    var menu = document.getElementById(id);
-    menu.style.display = (menu.style.display === "none") ? "block" : "none";
+function _tM(i) {
+    let m = document.getElementById(i);
+    m.style.display = m.style.display === "none" ? "block" : "none";
 }
 
-// Avvio automatico
-window.onload = avviaRotazioneAutomatica;
+window.onload = _aR;
