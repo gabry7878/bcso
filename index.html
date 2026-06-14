@@ -13,14 +13,13 @@
         Disclaimer: This site is an unofficial project inspired by the Sheriff/Government Authority, created for entertainment purposes related to FiveM RolePlay of EmeralsRP.it. It is not affiliated with or endorsed by the Sheriff or any government authority.
     </div>
 
-<!-- NAVBAR -->
     <nav>
         <a href="#home">Home</a>
         <a href="#vertici">Direzione</a>
         <a href="#reparti">Reparti</a>
         <a href="#altocomando">Alto Com</a>
         <a href="#gerarchia">Gerarchia</a>
-        <a href="https://emeralsgov.it/los_santos/" target="_blank">Codice Penale</a> <!-- NUOVO TASTO -->
+        <a href="https://emeralsgov.it/los_santos/" target="_blank">Codice Penale</a>
         <a href="#arruolati">Entra nel BCSO</a>
     </nav>
 
@@ -43,21 +42,19 @@
                         Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna, assicurando una base solida per supportare le unità operative impegnate a Sandy Shores e Paleto Bay.
                     </p>
                     <div class="tag-container">
-                        <button class="tag active" onclick="cambiaVertice('lodi', this)">Dir. Generale Coca</button>
-                        <button class="tag" onclick="cambiaVertice('roma', this)">//</button>
-                        <button class="tag" onclick="cambiaVertice('saitama', this)">Dir. Atlanta</button>
+                        <button class="tag active" onclick="_cV('coca', this)">Dir. Generale Coca</button>
+                        <button class="tag" onclick="_cV('detroit', this)">V. Dir. Generale Detroit</button>
+                        <button class="tag" onclick="_cV('atlanta', this)">Dir. Atlanta</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- REPARTI -->
         <section id="reparti">
             <h2 class="section-title">REPARTI</h2>
             <div class="grid-reparti">
                 
-                <!-- GND -->
-                <div class="reparto-card" onclick="toggleMenu('menu-gnd')">
+                <div class="reparto-card" onclick="_tM('menu-gnd')">
                     <div class="reparto-icon"><i class="fas fa-gun"></i></div>
                     <div class="reparto-text">
                         <h4>GND</h4>
@@ -69,8 +66,7 @@
                     </div>
                 </div>
 
-                <!-- JTF2 -->
-                <div class="reparto-card" onclick="toggleMenu('menu-jtf')">
+                <div class="reparto-card" onclick="_tM('menu-jtf')">
                     <div class="reparto-icon"><i class="fas fa-bullseye"></i></div>
                     <div class="reparto-text">
                         <h4>JTF2</h4>
@@ -82,8 +78,7 @@
                     </div>
                 </div>
 
-                <!-- Investigativa -->
-                <div class="reparto-card" onclick="toggleMenu('menu-inv')">
+                <div class="reparto-card" onclick="_tM('menu-inv')">
                     <div class="reparto-icon"><i class="fas fa-search"></i></div>
                     <div class="reparto-text">
                         <h4>Investigativa</h4>
@@ -95,7 +90,6 @@
                     </div>
                 </div>
 
-                <!-- SDF -->
                 <div class="reparto-card">
                     <div class="reparto-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="reparto-text">
@@ -104,7 +98,6 @@
                     </div>
                 </div>
 
-                <!-- Elicotteristi -->
                 <div class="reparto-card">
                     <div class="reparto-icon"><i class="fas fa-helicopter"></i></div>
                     <div class="reparto-text">
@@ -118,30 +111,25 @@
 
         <br><br><br>
 
-                <!-- RISORSE UTILI -->
         <section id="risorse">
             <h2 class="section-title">Risorse Utili</h2>
             <div class="risorse-container">
-                <!-- Opzione 1 -->
                 <a href="https://emeralsgov.it/los_santos/" target="_blank" class="risorsa-card">
                     <i class="fas fa-gavel"></i>
                     <h3>Codice Penale</h3>
                 </a>
 
-                <!-- Opzione 2 -->
-                <div class="risorsa-card" onclick="toggleCodici()">
+                <div class="risorsa-card" onclick="_tC()">
                     <i class="fas fa-broadcast-tower"></i>
                     <h3>Codici Radio</h3>
                 </div>
 
-                <!-- Opzione 3 -->
-                <a href="https://cdn.discordapp.com/attachments/1514660019801690123/1514668859226067115/REGOLAMENTO_INTERNO_B.C.S.O.pdf?ex=6a2cdd8d&is=6a2b8c0d&hm=317593de6f7b42b3d2924964b75c0fa9f3e5de1a6be54c7c39dfeebe1ded7c3b&" target="_blank" class="risorsa-card">
+                <a href="https://cdn.discordapp.com/attachments/1514660019801690123/1514668859226067115/REGOLAMENTO_INTERNO_B.C.S.O.pdf" target="_blank" class="risorsa-card">
                     <i class="fas fa-file-pdf"></i>
                     <h3>Manuale Operativo</h3>
                 </a>
             </div>
 
-            <!-- Contenuto Nascosto Codici Radio -->
             <div id="codici-radio-text" style="display:none; max-width: 800px; margin: 20px auto; background: var(--bg-card); padding: 20px; border-radius: 8px; border: 1px solid var(--bcso-gold); white-space: pre-wrap; color: white; text-align: left;">
             10-0  GAME CRASH
             10-2  RIPETERE
@@ -178,20 +166,7 @@
             - EMS 2
             - EMS Paleto/Sandy 2.1
             </div>
-            
-            </div>
         </section>
-
-        <script>
-        function toggleCodici() {
-            var x = document.getElementById("codici-radio-text");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-        </script>
 
         <br><br><br>
 
@@ -220,7 +195,7 @@
                 </div>
 
                 <div class="comando-card">
-                    <div class="avatar" style="background-image: url('assets/img/montenegro.png');"></div>
+                    <div class="avatar" style="background-image: url('https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024');"></div>
                     <div class="ruolo">Vice Comandante</div>
                     <div class="nome">Montenegro</div>
                     <div class="data-servizio">In servizio dal 23/03/2026</div>
@@ -239,8 +214,6 @@
                     <div class="nome">Madrid</div>
                     <div class="data-servizio">In servizio dal 11/02/2026</div>
                 </div>
-
-
             </div>
         </section>
 
@@ -249,7 +222,6 @@
         <section id="gerarchia">
             <h2 class="section-title">Catena di Comando</h2>
             <div class="gerarchia-container">
-                
                 <div class="gerarchia-tier">
                     <h3 class="tier-title"><i class="fas fa-star"></i> Direzione <i class="fas fa-star"></i></h3>
                     <ul class="rank-list">
@@ -302,11 +274,8 @@
                         <li style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">Recluta</li>
                     </ul>
                 </div>
-
             </div>
         </section>
-
-        <br><br><br>
 
         <br><br><br>
 
@@ -333,7 +302,7 @@
                     <div class="step-number">04</div>
                     <div class="step-title">Valutazione</div>
                     <div class="step-desc">Attendi l'esito. Nel mentre, consulta il nostro manuale didattico per prepararti.</div>
-                    <a href="https://cdn.discordapp.com/attachments/1514660019801690123/1514668859226067115/REGOLAMENTO_INTERNO_B.C.S.O.pdf?ex=6a2c34cd&is=6a2ae34d&hm=e8ebdee5948477e59f6af7ae6769255beaea0fbee8e74b264625b3ff6b8ae909&" target="_blank" class="btn"><i class="fas fa-file-pdf"></i> Apri Manuale</a>
+                    <a href="https://cdn.discordapp.com/attachments/1514660019801690123/1514668859226067115/REGOLAMENTO_INTERNO_B.C.S.O.pdf" target="_blank" class="btn"><i class="fas fa-file-pdf"></i> Apri Manuale</a>
                 </div>
                 <div class="step-box">
                     <div class="step-number">05</div>
@@ -348,26 +317,12 @@
 
         <br><br><br>
 
-
-
     </div>
 
-    <script src="assets/js/script.js"></script>
-</div> <footer>
-        <p>WebSite made by <span class="creator-name">Stuporeh</span>  | Inspired by emeralsgov.it</p>
+    <footer>
+        <p>WebSite made by <span class="creator-name">Stuporeh</span> | Inspired by emeralsgov.it</p>
     </footer>
 
     <script src="assets/js/script.js"></script>
-
-<script>
-function toggleMenu(id) {
-    var menu = document.getElementById(id);
-    if (menu.style.display === "none") {
-        menu.style.display = "block";
-    } else {
-        menu.style.display = "none";
-    }
-}
-</script>
 </body>
 </html>
