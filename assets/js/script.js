@@ -34,14 +34,14 @@ const datiVertici = {
         ds: "Pilastro della continuità amministrativa dello sceriffato. La sua precisione metodica si concentra sulla gestione dei protocolli e della burocrazia interna."
     },
     detroit: { 
-        t: "V. Dir. Generale Detroit",
+        t: "V. Dir. Generale Phoenix",
         f: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
         d: "In servizio dal 29/12/2025.",
         ds: "Coadiuva la direzione generale nella supervisione dei dipartimenti e nel coordinamento strategico sul territorio."
     },
     atlanta: { 
-        t: "Direttore Atlanta",
-        f: "https://cdn.discordapp.com/icons/1071346343710306414/a_c4289dc50692ae051845813e7c2966ea.gif?animated=true&size=1024",
+        t: "Ass. Direttore Stuporeh",
+        f: "assets/img/stuporeh.png",
         d: "In servizio dal 10/03/2025.",
         ds: "Responsabile diretto delle unità tattiche e delle indagini speciali. Gestisce il dispiegamento delle pattuglie nelle zone ad alto rischio."
     }
