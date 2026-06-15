@@ -40,7 +40,7 @@ const datiVertici = {
         ds: "Coadiuva la direzione generale nella supervisione dei dipartimenti e nel coordinamento strategico sul territorio."
     },
     atlanta: { 
-        t: "Ass. Direttore Stuporeh",
+        t: "Direttore Stuporeh",
         f: "assets/img/stuporeh.png",
         d: "In servizio dal 10/03/2025.",
         ds: "Responsabile diretto delle unità tattiche e delle indagini speciali. Gestisce il dispiegamento delle pattuglie nelle zone ad alto rischio."
