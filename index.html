@@ -5,22 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BCSO - Blaine County Sheriff's Office</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="disclaimer-rp">
-        Disclaimer: This site is an unofficial project inspired by the Sheriff/Government Authority, created for entertainment purposes related to FiveM RolePlay of EmeralsRP.it. It is not affiliated with or endorsed by the Sheriff or any government authority.
+    <div class="disclaimer-bar" id="disclaimer-bar">
+        <div class="disclaimer-container">
+            <div class="disclaimer-header">
+                <span class="disclaimer-tag">Roleplay Notice</span>
+                <button class="close-disclaimer" onclick="document.getElementById('disclaimer-bar').style.display='none'"><i class="fas fa-times"></i></button>
+            </div>
+            <p class="disclaimer-text">Questo è un sito non ufficiale per scopi di intrattenimento legati al RolePlay di EmeralsRP.it. Non siamo affiliati con alcuna vera forza dell'ordine.</p>
+        </div>
     </div>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#vertici">Direzione</a>
-        <a href="#reparti">Reparti</a>
-        <a href="#altocomando">Alto Com</a>
-        <a href="#gerarchia">Gerarchia</a>
-        <a href="https://emeralsgov.it/los_santos/" target="_blank">Codice Penale</a>
-        <a href="#arruolati">Entra nel BCSO</a>
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <i class="fas fa-star nav-star"></i>
+                <span>BCSO</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#vertici" class="nav-link">Direzione</a>
+                <a href="#reparti" class="nav-link">Reparti</a>
+                <a href="#altocomando" class="nav-link">Alto Comando</a>
+                <a href="#gerarchia" class="nav-link">Gerarchia</a>
+                <a href="https://emeralsgov.it/los_santos/" target="_blank" class="nav-link external-link"><i class="fas fa-gavel"></i> Penale</a>
+                <a href="#arruolati" class="nav-link cta-link">Entra nel BCSO</a>
+            </div>
+            <button class="mobile-nav-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
     <header id="home" class="hero">
@@ -55,54 +75,64 @@
             <div class="grid-reparti">
                 
                 <div class="reparto-card" onclick="_tM('menu-gnd')">
-                    <div class="reparto-icon"><i class="fas fa-gun"></i></div>
-                    <div class="reparto-text">
-                        <h4>GND</h4>
-                        <p>Gang & Narcotics Division: Si occupa di narcotrafficanti e associazioni a delinquere</p>
-                        <div id="menu-gnd" class="reparto-dropdown" style="display:none; margin-top:10px; font-size:0.9rem; color: var(--bcso-gold);">
-                            Direttore: Giotto<br>
-                            Vice Direttore: Milano, Zxka
+                    <div class="reparto-card-header">
+                        <div class="reparto-icon"><i class="fas fa-gun"></i></div>
+                        <div class="reparto-text">
+                            <h4>GND</h4>
+                            <p>Gang & Narcotics Division: Si occupa di narcotrafficanti e associazioni a delinquere</p>
                         </div>
+                    </div>
+                    <div id="menu-gnd" class="reparto-dropdown" style="display:none;">
+                        Direttore: Giotto<br>
+                        Vice Direttore: Milano, Zxka
                     </div>
                 </div>
 
                 <div class="reparto-card" onclick="_tM('menu-jtf')">
-                    <div class="reparto-icon"><i class="fas fa-bullseye"></i></div>
-                    <div class="reparto-text">
-                        <h4>JTF2</h4>
-                        <p>Joint Task Force 2: Si occupa di sicurezza governativa</p>
-                        <div id="menu-jtf" class="reparto-dropdown" style="display:none; margin-top:10px; font-size:0.9rem; color: var(--bcso-gold);">
-                            Gestore: Coca<br>
-                            Vice Gestore: Madrid
+                    <div class="reparto-card-header">
+                        <div class="reparto-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="reparto-text">
+                            <h4>JTF2</h4>
+                            <p>Joint Task Force 2: Si occupa di sicurezza governativa</p>
                         </div>
+                    </div>
+                    <div id="menu-jtf" class="reparto-dropdown" style="display:none;">
+                        Gestore: Coca<br>
+                        Vice Gestore: Madrid
                     </div>
                 </div>
 
                 <div class="reparto-card" onclick="_tM('menu-inv')">
-                    <div class="reparto-icon"><i class="fas fa-search"></i></div>
-                    <div class="reparto-text">
-                        <h4>Investigativa</h4>
-                        <p>Indagini su attività criminali</p>
-                        <div id="menu-inv" class="reparto-dropdown" style="display:none; margin-top:10px; font-size:0.9rem; color: var(--bcso-gold);">
-                            Comandante: CRIPTATO<br>
-                            Vice Comandante: CRIPTATO
+                    <div class="reparto-card-header">
+                        <div class="reparto-icon"><i class="fas fa-search"></i></div>
+                        <div class="reparto-text">
+                            <h4>Investigativa</h4>
+                            <p>Indagini su attività criminali</p>
+                        </div>
+                    </div>
+                    <div id="menu-inv" class="reparto-dropdown" style="display:none;">
+                        Comandante: CRIPTATO<br>
+                        Vice Comandante: CRIPTATO
+                    </div>
+                </div>
+
+                <div class="reparto-card">
+                    <div class="reparto-card-header">
+                        <div class="reparto-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="reparto-text">
+                            <h4>SDF</h4>
+                            <p>Blocchi e fermi stradali</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="reparto-card">
-                    <div class="reparto-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="reparto-text">
-                        <h4>SDF</h4>
-                        <p>Blocchi e fermi stradali</p>
-                    </div>
-                </div>
-
-                <div class="reparto-card">
-                    <div class="reparto-icon"><i class="fas fa-helicopter"></i></div>
-                    <div class="reparto-text">
-                        <h4>Elicotteristi</h4>
-                        <p>Pattugliamento e controllo aereo</p>
+                    <div class="reparto-card-header">
+                        <div class="reparto-icon"><i class="fas fa-helicopter"></i></div>
+                        <div class="reparto-text">
+                            <h4>Elicotteristi</h4>
+                            <p>Pattugliamento e controllo aereo</p>
+                        </div>
                     </div>
                 </div>
 
@@ -130,41 +160,170 @@
                 </a>
             </div>
 
-            <div id="codici-radio-text" style="display:none; max-width: 800px; margin: 20px auto; background: var(--bg-card); padding: 20px; border-radius: 8px; border: 1px solid var(--bcso-gold); white-space: pre-wrap; color: white; text-align: left;">
-            10-0  GAME CRASH
-            10-2  RIPETERE
-            10-3  SILENZIO RADIO (Utilizzabile solo da alto comando e direzione)
-            10-4  AFFERMATIVO
-            10-5  NEGATIVO
-            10-7  USCITA DI SERVIZIO
-            10-8  ENTRATA IN SERVIZIO
-            10-9  AFK PER 5 MIN O PIU'
-            10-10 SPARATORIA
-            10-15 SITUAZIONE DI PERICOLO
-            10-17 RAGGRUPPAMENTO SOSPETTO DI PERSONE
-            10-19 RIGA IN CENTRALE
-            10-20 CHIEDERE LA POSIZIONE
-            10-25 FERMO STRADALE (INDICARE IL CIVICO)
-            10-30 EAGLE IN DECOLLO DALLA CENTRALE (CHIEDERE AUTORIZZAZIONE RADIO)
-            10-31 EAGLE IN ATTERAGGIO IN CENTRALE (CHIEDERE AUTORIZZAZIONE RADIO)
-            10-48 ARRIVARE SILENZIOSAMENTE
-            10-50 VEICOLO SOSPETTO
-            10-55 NUMERO RANGER - NOME DEGLI AGENTI CHE LA COMPONGONO - STATUS DELLA RANGER
-            10-60 RICHIESTA RANGER DI SUPPORTO (INDICARE IL CIVICO)
-            10-66 TENTATO RAPIMENTO
-            10-80 INSEGUIMENTO (INDICARE IL CIVICO E RICHIEDERE UN 10-60 IN SUPPORTO)
-            10-99 RAPINA IN CORSO
-            10-100 AGENTE A TERRA (INDICARE IL CIVICO)
-            10-101 ASSALTO ALLA CENTRALE
-
-            FREQUENZE RADIO DELLE FDO / EMS / RIMOZIONE FORZATA:
-
-            - Sceriffato 1.3
-            - LSPD 1.2 
-            - FBI 1.1
-            - Governo LS 1
-            - EMS 2
-            - EMS Paleto/Sandy 2.1
+            <div id="codici-radio-box" class="radio-codes-box" style="display:none;">
+                <div class="radio-header">
+                    <h3>Pannello Codici & Frequenze Radio</h3>
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="radio-search" placeholder="Filtra codici (es. 10-10, inseguimento)..." onkeyup="_filterRadioCodes()">
+                    </div>
+                </div>
+                
+                <div class="radio-content-split">
+                    <div class="radio-list-wrapper">
+                        <h4>Codici Operativi</h4>
+                        <div class="radio-list" id="radio-list">
+                            <div class="radio-item" data-code="10-0" data-desc="game crash">
+                                <span class="code">10-0</span>
+                                <span class="desc">Game Crash</span>
+                            </div>
+                            <div class="radio-item" data-code="10-2" data-desc="ripetere">
+                                <span class="code">10-2</span>
+                                <span class="desc">Ripetere</span>
+                            </div>
+                            <div class="radio-item warning" data-code="10-3" data-desc="silenzio radio (utilizzabile solo da alto comando e direzione)">
+                                <span class="code">10-3</span>
+                                <span class="desc">Silenzio Radio <small>(Solo Alto Comando/Direzione)</small></span>
+                            </div>
+                            <div class="radio-item" data-code="10-4" data-desc="affermativo">
+                                <span class="code">10-4</span>
+                                <span class="desc">Affermativo</span>
+                            </div>
+                            <div class="radio-item" data-code="10-5" data-desc="negativo">
+                                <span class="code">10-5</span>
+                                <span class="desc">Negativo</span>
+                            </div>
+                            <div class="radio-item" data-code="10-7" data-desc="uscita di servizio">
+                                <span class="code">10-7</span>
+                                <span class="desc">Uscita di Servizio</span>
+                            </div>
+                            <div class="radio-item active-status" data-code="10-8" data-desc="entrata in servizio">
+                                <span class="code">10-8</span>
+                                <span class="desc">Entrata in Servizio</span>
+                            </div>
+                            <div class="radio-item" data-code="10-9" data-desc="afk per 5 min o piu'">
+                                <span class="code">10-9</span>
+                                <span class="desc">AFK (5 minuti o più)</span>
+                            </div>
+                            <div class="radio-item danger animate-pulse" data-code="10-10" data-desc="sparatoria">
+                                <span class="code">10-10</span>
+                                <span class="desc"><i class="fas fa-crosshairs"></i> Sparatoria</span>
+                            </div>
+                            <div class="radio-item danger" data-code="10-15" data-desc="situazione di pericolo">
+                                <span class="code">10-15</span>
+                                <span class="desc">Situazione di Pericolo</span>
+                            </div>
+                            <div class="radio-item" data-code="10-17" data-desc="raggruppamento sospetto di persone">
+                                <span class="code">10-17</span>
+                                <span class="desc">Raggruppamento Sospetto</span>
+                            </div>
+                            <div class="radio-item" data-code="10-19" data-desc="riga in centrale">
+                                <span class="code">10-19</span>
+                                <span class="desc">Riga in Centrale</span>
+                            </div>
+                            <div class="radio-item" data-code="10-20" data-desc="chiedere la posizione">
+                                <span class="code">10-20</span>
+                                <span class="desc">Chiedere Posizione</span>
+                            </div>
+                            <div class="radio-item" data-code="10-25" data-desc="fermo stradale (indicare il civico)">
+                                <span class="code">10-25</span>
+                                <span class="desc">Fermo Stradale <small>(indicare civico)</small></span>
+                            </div>
+                            <div class="radio-item info" data-code="10-30" data-desc="eagle in decollo dalla centrale (chiedere autorizzazione radio)">
+                                <span class="code">10-30</span>
+                                <span class="desc">Eagle in Decollo <small>(richiedere auth)</small></span>
+                            </div>
+                            <div class="radio-item info" data-code="10-31" data-desc="eagle in atterraggio in centrale (chiedere autorizzazione radio)">
+                                <span class="code">10-31</span>
+                                <span class="desc">Eagle in Atterraggio <small>(richiedere auth)</small></span>
+                            </div>
+                            <div class="radio-item" data-code="10-48" data-desc="arrivare silenziosamente">
+                                <span class="code">10-48</span>
+                                <span class="desc">Arrivare Silenziosamente</span>
+                            </div>
+                            <div class="radio-item" data-code="10-50" data-desc="veicolo sospetto">
+                                <span class="code">10-50</span>
+                                <span class="desc">Veicolo Sospetto</span>
+                            </div>
+                            <div class="radio-item" data-code="10-55" data-desc="numero ranger - nome degli agenti che la compongono - status della ranger">
+                                <span class="code">10-55</span>
+                                <span class="desc">Info Pattuglia Ranger</span>
+                            </div>
+                            <div class="radio-item danger" data-code="10-60" data-desc="richiesta ranger di supporto (indicare il civico)">
+                                <span class="code">10-60</span>
+                                <span class="desc">Richiesta Supporto Ranger</span>
+                            </div>
+                            <div class="radio-item danger" data-code="10-66" data-desc="tentato rapimento">
+                                <span class="code">10-66</span>
+                                <span class="desc">Tentato Rapimento</span>
+                            </div>
+                            <div class="radio-item danger" data-code="10-80" data-desc="inseguimento (indicare il civico e richiedere un 10-60 in supporto)">
+                                <span class="code">10-80</span>
+                                <span class="desc">Inseguimento <small>(indicare civico)</small></span>
+                            </div>
+                            <div class="radio-item danger animate-pulse" data-code="10-99" data-desc="rapina in corso">
+                                <span class="code">10-99</span>
+                                <span class="desc"><i class="fas fa-wallet"></i> Rapina in Corso</span>
+                            </div>
+                            <div class="radio-item critical animate-pulse" data-code="10-100" data-desc="agente a terra (indicare il civico)">
+                                <span class="code">10-100</span>
+                                <span class="desc"><i class="fas fa-user-injured"></i> AGENTE A TERRA</span>
+                            </div>
+                            <div class="radio-item critical animate-pulse" data-code="10-101" data-desc="assalto alla centrale">
+                                <span class="code">10-101</span>
+                                <span class="desc"><i class="fas fa-building-shield"></i> Assalto alla Centrale</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="radio-freq-wrapper">
+                        <h4>Frequenze Ufficiali</h4>
+                        <div class="freq-list">
+                            <div class="freq-card">
+                                <div class="freq-icon"><i class="fas fa-star-of-life"></i></div>
+                                <div class="freq-info">
+                                    <span class="freq-label">Sceriffato (BCSO)</span>
+                                    <span class="freq-val">Ch. 1.3</span>
+                                </div>
+                            </div>
+                            <div class="freq-card">
+                                <div class="freq-icon"><i class="fas fa-shield-halved"></i></div>
+                                <div class="freq-info">
+                                    <span class="freq-label">Polizia (LSPD)</span>
+                                    <span class="freq-val">Ch. 1.2</span>
+                                </div>
+                            </div>
+                            <div class="freq-card">
+                                <div class="freq-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="freq-info">
+                                    <span class="freq-label">FBI / FIB</span>
+                                    <span class="freq-val">Ch. 1.1</span>
+                                </div>
+                            </div>
+                            <div class="freq-card">
+                                <div class="freq-icon"><i class="fas fa-landmark"></i></div>
+                                <div class="freq-info">
+                                    <span class="freq-label">Governo LS</span>
+                                    <span class="freq-val">Ch. 1.0</span>
+                                </div>
+                            </div>
+                            <div class="freq-card ems">
+                                <div class="freq-icon"><i class="fas fa-truck-medical"></i></div>
+                                <div class="freq-info">
+                                    <span class="freq-label">Soccorso Medico (EMS)</span>
+                                    <span class="freq-val">Ch. 2.0</span>
+                                </div>
+                            </div>
+                            <div class="freq-card ems">
+                                <div class="freq-icon"><i class="fas fa-hospital-user"></i></div>
+                                <div class="freq-info">
+                                    <span class="freq-label">EMS Paleto/Sandy</span>
+                                    <span class="freq-val">Ch. 2.1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
